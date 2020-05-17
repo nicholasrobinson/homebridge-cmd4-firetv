@@ -16,9 +16,9 @@ I liked the simplicity of this solution, so I updated it to support AppleTV 4th+
         "accessories": [
             {
                 "type": "Switch",
-                "displayName": "play",
+                "displayName": "left,left,left,sleep,sleep,sleep,sleep,sleep,sleep,top_menu,sleep,menu,sleep,menu,sleep,sleep,down,down,left,left,left,left,right,right,select,sleep,sleep,down,down,select,sleep,select,sleep,select",
                 "on": "FALSE",
-                "name": "AppleTv_play",
+                "name": "AppleTv_favorite",
                 "state_cmd": "/root/.homebridge/Cmd4Scripts/AppleTVRemote.sh",
                 "polling": true,
                 "interval": 5,
@@ -31,6 +31,11 @@ I liked the simplicity of this solution, so I updated it to support AppleTV 4th+
 
 # Example AppleTVRemote.sh
 
+You will need to change the following line:
+```
+./send_atv_commands.py "<IP_ADDRESS>" "$2"
+```
+to:
 ```
 ./send_atv_commands.py "10.0.0.1" "$2"
 ```
