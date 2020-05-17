@@ -18,8 +18,8 @@ I liked the simplicity of this solution, so I updated it to support AppleTV 4th+
                 "type": "Switch",
                 "displayName": "play",
                 "on": "FALSE",
-                "name": "DmapAppleTv_play",
-                "state_cmd": "/root/.homebridge/Cmd4Scripts/DmapAppleTVRemote.sh",
+                "name": "AppleTv_play",
+                "state_cmd": "/root/.homebridge/Cmd4Scripts/AppleTVRemote.sh",
                 "polling": true,
                 "interval": 5,
                 "timeout": 60000
@@ -29,36 +29,8 @@ I liked the simplicity of this solution, so I updated it to support AppleTV 4th+
 ...
 ```
 
-# Example DmapAppleTVRemote.sh
+# Example AppleTVRemote.sh
 
 ```
-./send_dmap_or_mrp_commands.py "Master Bedroom TV" "192.168.1.37" "00000000-1070-b195-9885-070543684b54" "$2"
-```
-
-# Example config.json using MRP (4th+ generation AppleTV)
-```
-...
-    {
-        "platform": "Cmd4",
-        "name": "Cmd4",
-        "accessories": [
-            {
-                "type": "Switch",
-                "displayName": "select",
-                "on": "FALSE",
-                "name": "MrpAppleTv_select",
-                "state_cmd": "/root/.homebridge/Cmd4Scripts/MrpAppleTVRemote.sh",
-                "polling": true,
-                "interval": 5,
-                "timeout": 60000
-            }
-        ]
-   }
-...
-```
-
-# Example MrpAppleTVRemote.sh
-
-```
-./send_dmap_or_mrp_commands.py "Master Bedroom TV" "192.168.1.37" "" "$2" --port 49831
+./send_atv_commands.py "10.0.0.1" "$2"
 ```
