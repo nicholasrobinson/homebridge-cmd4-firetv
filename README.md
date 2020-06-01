@@ -35,7 +35,7 @@ ADB_COMMAND="<PATH_TO_ADB>"
 ```
 to:
 ```
-ADB_COMMAND="/Users/nicholasrobinson/Downloads/platform-tools/adb"
+ADB_COMMAND="/opt/local/platform-tools/adb"
 ```
 
 You will need to change the following line:
@@ -44,7 +44,7 @@ $ADB_COMMAND connect "<IP_ADDRESS>:<PORT>"
 ```
 to:
 ```
-./send_atv_commands.py "192.168.1.231:5555"
+$ADB_COMMAND connect "192.168.1.231:5555"
 ```
 
 # Useful key codes
