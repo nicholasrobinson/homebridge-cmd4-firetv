@@ -2,7 +2,7 @@
 
 I haven't seen a good solution for integrating Amazon FireTV with Homebridge. I decided to adapt https://github.com/nicholasrobinson/homebridge-cmd4-atvremote to send commands using Android Debug Bridge (ADB).
 
-# Example config.json using DMAP (2nd generation AppleTV)
+# Example config.json
 
 Note: `26` in the `displayName` field below indicates `POWER`.
 
