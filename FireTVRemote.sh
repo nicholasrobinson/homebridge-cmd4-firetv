@@ -20,6 +20,8 @@ if [ "$1" = "Set" ]; then
          POWERED_OFF=$($ADB_COMMAND shell dumpsys power | grep 'Display Power' | grep 'state=OFF')
          if [ "$2" != "26" ] || [ "$POWERED_OFF" != "" ]; then
             $ADB_COMMAND shell input keyevent "$2"
+         else
+            $ADB_COMMAND shell input keyevent 23
          fi
          exit $?
       else
